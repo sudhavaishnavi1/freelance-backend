@@ -26,8 +26,8 @@ const createCheckoutSession = async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://freelance-frontend-chi.vercel.app/success",
+      cancel_url: "https://freelance-frontend-chi.vercel.app/cancel",
     });
 
     // ✅ Send session.url to frontend for redirection
