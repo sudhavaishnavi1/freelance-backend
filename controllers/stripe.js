@@ -20,19 +20,19 @@ const createCheckoutSession = async (req, res) => {
               name: gig.title,
               description: gig.description,
             },
-            unit_amount: parseInt(gig.price) * 100, // Convert ₹ to paise
+            unit_amount: parseInt(gig.price) * 100, // ₹ to paise
           },
           quantity: 1,
         },
       ],
       mode: "payment",
+
+      // ✅ Update these two lines:
       success_url: "https://freelance-frontend-chi.vercel.app/success",
       cancel_url: "https://freelance-frontend-chi.vercel.app/cancel",
     });
 
-    // ✅ Send session.url to frontend for redirection
     res.status(200).json({ url: session.url });
-
   } catch (error) {
     console.error("❌ Stripe Checkout Error:", error);
     res.status(500).json({ error: "Failed to create checkout session" });
