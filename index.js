@@ -17,7 +17,10 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
 // ✅ Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://your-frontend-vercel-url.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // ✅ Serve static files (for gig images etc.)
