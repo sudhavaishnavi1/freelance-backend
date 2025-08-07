@@ -18,7 +18,7 @@ const adminRoutes = require("./routes/adminRoutes");
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://your-frontend-vercel-url.vercel.app",
+  origin: "https://your-frontend-vercel-chi.vercel.app",
   credentials: true
 }));
 app.use(express.json());
