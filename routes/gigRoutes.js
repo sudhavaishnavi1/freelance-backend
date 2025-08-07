@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
-const Gig = require("../models/Gig");
+const Gig = require("../models/gig");
 const verifyToken = require("../middleware/verifyToken");
 
 // 🔧 Configure multer to store uploaded images
